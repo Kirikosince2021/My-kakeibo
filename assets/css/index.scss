@@ -1,0 +1,50 @@
+.index-view {
+  width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
+  font-family: $jp;
+  overflow: hidden;
+
+  &__top-image {
+    width: 100%;
+    height: 40vh;
+    background-image: url('/images/coffee-bg.jpg');
+    background-size: cover;
+    background-position-y: 45%;
+  }
+
+  &__contents {
+    position: relative;
+    background-color: $light-gray;
+    min-height: 60vh;
+    width: 100vw;
+  }
+
+}
+
+.memo {
+  width: 300px;
+  height: 100px;
+  background-color: $pink;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  box-shadow: 5px 5px 5px black;
+  transition: .3s all;
+  cursor: pointer;
+  color: $dark-gray;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  textarea {
+    resize: none;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+  }
+}
+.memo--closed {
+  transform: translateX(280px);
+}

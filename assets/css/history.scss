@@ -1,0 +1,396 @@
+.history-view {
+  width: 100vw;
+  min-height: 60vh;
+  box-sizing: border-box;
+  padding: 0px 20px 20px;
+
+  .page-headding {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+    
+    .border {
+      background-color: rgb(2, 1, 1);
+      height: 1px;
+      width: 100%;
+      margin: 5px 0 10px;
+    }
+
+    span {
+      &:last-of-type {
+        font-size: 8px;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+
+  button {
+    background-color: $base;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__contents {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .reset-history {
+      background-color: transparent;
+      color: black;
+    }
+
+    .contents__left {
+      width: 70%;
+      margin-top: 20px;
+      min-width: 500px;
+
+      .mode-select {
+        text-align: right;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+
+      .table-head {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .table-body {
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid $gray;
+        min-width: 500px;
+
+        table {
+          width: 100%;
+
+          .checked {
+            .color-box {
+              background-color: $pink;
+            }
+          }
+
+          .sum {
+            border: none;
+          }
+
+          tr {
+            height: 35px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            border-bottom: 1px dashed $dark-gray;
+
+            .date {
+              width: 10%;
+            }
+            .tag {
+              width: 10%;
+              background-color: $base;
+              border-radius: 30px;
+              padding: 5px 0;
+              font-size: 10px;
+              color: white;
+              font-weight: normal;
+            }
+            .price {
+              width: 20%;
+              text-align: left;
+              padding: 0 20px;
+              box-sizing: border-box;
+            }
+            .card,.dummy-card {
+              width: 10px;
+            }
+            .desc {
+              width: 50%;
+            }
+            .edit {
+              display: flex;
+              color: $dark-gray;
+
+              span {
+                cursor: pointer;
+                margin: 0 4px;
+              }
+            }
+
+            .color-box {
+              border-radius: 5px;
+              background-color: $base;
+              height: 30px;
+              width: 30px;
+            }
+          }
+          .target {
+            input {
+              width: 100px;
+              background-color: transparent;
+              border: 1px solid $dark-gray;
+              margin-left: 5px;
+              font-family: "Rochester", cursive;
+              font-size: 16px;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+
+    .contents__right {
+      width: 25%;
+      min-width: 300px;
+      justify-content: center;
+
+      .new {
+        font-weight: bold;
+        letter-spacing: 0.2em;
+        margin: 20px auto;
+        display: block;
+        height: 40px;
+      }
+
+      .section-title {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .tags {
+        padding: 5px;
+        border-radius: 5px;
+        margin: 0 auto 10px;
+        width: 100%;
+        border: 1px solid $gray;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+
+        span {
+          margin: 5px;
+          background-color: $base;
+          border-radius: 5px;
+          display: inline-block;
+          height: 20px;
+          cursor: pointer;
+          padding: 5px 10px;
+          color: white;
+        }
+
+        .inactive {
+          background-color: $dark-gray;
+          color: lightgray;
+        }
+
+        i {
+          font-size: 20px;
+          cursor: pointer;
+          position: absolute;
+          top: 5px;
+          right: 5px;
+        }
+      }
+
+      button {
+        margin: 0 auto 20px;
+        display: block;
+      }
+
+      .vc-container {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.vm--modal {
+  background-color: $base;
+
+  h1 {
+    color: white;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  form {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .input-wrapper {
+      width: 50%;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    p {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    span {
+      font-size: 12px;
+    }
+
+    input {
+      border: 1px solid rgb(165, 175, 192);
+      padding: 2px;
+      border-radius: 5px;
+
+      &:first-of-type {
+        width: 100px;
+      }
+
+      &:last-of-type {
+        width: 250px;
+      }
+    }
+
+    select {
+      display: block;
+      border: 1px solid rgb(165, 175, 192);
+      padding: 2px;
+      border-radius: 5px;
+      background-color: white;
+    }
+
+    .create-btn {
+      margin: 20px auto 0;
+      padding: 5px 10px;
+    }
+  }
+}
+
+.color0 {
+  background-color: $dark-gray!important;
+}
+
+.color1 {
+  background-color: $color1!important;
+}
+
+.color2 {
+  background-color: $color2!important;
+}
+
+.color3 {
+  background-color: $color3!important;
+}
+
+.color4 {
+  background-color: $color4!important;
+}
+
+.color5 {
+  background-color: $color5!important;
+}
+
+.color6 {
+  background-color: $color6!important;
+}
+
+.color7 {
+  background-color: $color7!important;
+}
+
+.color8 {
+  background-color: $color8!important;
+}
+
+.color9 {
+  background-color: $color9!important;
+}
+
+.color10 {
+  background-color: $color10!important;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.custom-checkbox {
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+
+  &:before {
+    width: 16px;
+    height: 16px;
+    left: -10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: -8px;
+  }
+
+  &:before, &:after {
+    position: absolute;
+    content: "";
+    top: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    width: 5px;
+    height: 9px;
+    top: 50%;
+    left: -5px;
+    border-right: 2px solid $base; /* チェックマークの色 */
+    border-bottom: 3px solid $base; /* チェックマークの色 */
+    content: '';
+    margin-top: -7px;
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+}
+
+input[type=checkbox]:checked + .custom-checkbox::after {
+  opacity: 1;
+}
+
+input[type=checkbox][disabled]:checked+.custom-checkbox:after {
+  border-right: 3px solid grey; /* チェックマークの色 */
+  border-bottom: 3px solid grey; /* チェックマークの色 */
+}
+
+.vm--modal {
+  .cardFlg-input {
+    display: flex;
+    align-content: center;
+    margin-left: 10px;
+
+    label {
+      span {
+        font-size: 12px;
+        margin-left: 5px;
+      }
+    }
+  }
+}

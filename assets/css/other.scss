@@ -1,0 +1,56 @@
+.other-view {
+  width: 100vw;
+  min-height: 60vh;
+  box-sizing: border-box;
+  padding: 0px 20px 20px;
+  position: relative;
+  min-width: 1000px;
+
+  .page-headding {
+    width: 70%;
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    .border {
+      background-color: rgb(2, 1, 1);
+      height: 1px;
+      width: 100%;
+      margin: 5px 0 10px;
+    }
+
+    span {
+      &:last-of-type {
+        font-size: 8px;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+
+  &__body {
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid #767676;
+    padding: 20px;
+    border-radius: 5px;
+
+    .logout-btn {
+      cursor: pointer;
+      background-color: $dark-gray;
+      color: white;
+      width: 200px;
+      padding: 30px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: $gray;
+        transition: 0.3s all;
+      }
+    }
+  }
+}

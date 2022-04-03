@@ -1,0 +1,25 @@
+/* Spinner LoadBar */
+.sp-loadbar {
+  width: 100px;
+  height: 18px;
+  border: 1px $base solid;
+  border-radius: 4px;
+  background: linear-gradient(-60deg, transparent 0%, transparent 50%, $base 50%, $base 75%, transparent 75%, transparent);
+  background-size: 20px 30px;
+  background-position: 0px 0px;
+  -webkit-animation: spLoadBar 0.8s infinite linear;
+  animation: spLoadBar 0.8s infinite linear;
+}
+@-webkit-keyframes spLoadBar {
+  from { background-position: 0px 0px; }
+  to { background-position: -20px 0px; }
+}
+@keyframes spLoadBar {
+  from { background-position: 0px 0px; }
+  to { background-position: -20px 0px; }
+}
+
+.load-txt {
+  margin-top: 10px;
+  font-size: 12px;
+}

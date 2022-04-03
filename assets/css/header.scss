@@ -1,0 +1,40 @@
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  letter-spacing: 0.07em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .config-body {
+    z-index: 1;
+    background-color: $sub3;
+    transition: .3s all;
+    width: 800px;
+    height: 300px;
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  button {
+    display: block;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    letter-spacing: 0.05em;
+    font-size: 20px;
+    position: absolute;
+    border: none;
+    transform: rotate(90deg);
+    top: 30px;
+    font-size: 15px;
+    right: -32px;
+    background-color: $sub3;
+    cursor: pointer;
+  }
+
+}
