@@ -114,6 +114,7 @@ header {
             <li>2022/2/15 エラーページを実装/他多数</li>
             <li>2022/2/18 スタイルの崩れを修正 & エラー対応</li>
             <li>2022/2/18 バージョンを1.0に指定</li>
+            <li>2022/4/5 ロードバーの表示崩れを修正</li>
           </ul>
         </div>
       </div>
@@ -148,7 +149,7 @@ export default {
       password: '',
       showLogin: true,
       showRegister: false,
-      loading: false,
+      loading: true,
       mode: 'default'
     }
   },
