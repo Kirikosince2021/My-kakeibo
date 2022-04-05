@@ -149,7 +149,7 @@ export default {
       password: '',
       showLogin: true,
       showRegister: false,
-      loading: true,
+      loading: false,
       mode: 'default'
     }
   },
